@@ -201,11 +201,34 @@ li.custom-menu-item:hover {
   to{transform: scale(1);}
 }
 .dialog-box .templates{
-  display: flex;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 9px;
+  justify-items: start;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 9px;
+}
+@media (max-width: 1200px) {
+  .dialog-box .templates {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .dialog-box .templates {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dialog-box .templates {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .dialog-box .templates {
+    grid-template-columns: 1fr;
+  }
 }
 .dialog-box picture{
   display: flex;
