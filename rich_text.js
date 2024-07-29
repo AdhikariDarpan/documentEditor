@@ -1366,7 +1366,7 @@ function Export2Word(element, filename = "") {
 }
 
 document.addEventListener("keydown", function (e) {
-  if ((e.ctrlKey && e.key === "u") || (e.ctrlKey && e.key === "s")) {
+  if ((e.ctrlKey && e.key === "s")) {
     e.preventDefault();
     saveDocument(e);
   }
